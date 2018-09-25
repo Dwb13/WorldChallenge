@@ -59,7 +59,7 @@ public class Jugar extends AppCompatActivity {
 
 
     }
-    public void crearPaises() {
+    public void crearPaises() { //crea los paises
         String colombiaD = "@mipmap/b0";
         int id1 = getResources().getIdentifier(colombiaD, "drawable", getPackageName());
         Drawable colombiaDr = getResources().getDrawable(id1);
@@ -185,7 +185,7 @@ public class Jugar extends AppCompatActivity {
 
 
     }
-    public void jugar(final Button[] botones, final Pais[] paises, int longVec) {
+    public void jugar(final Button[] botones, final Pais[] paises, int longVec) { //empieza a jugar
         botonCorrecto = false;
         Random aleatorio = new Random(System.currentTimeMillis());
         final int randomBoton = aleatorio.nextInt(botones.length);
@@ -207,7 +207,7 @@ public class Jugar extends AppCompatActivity {
             }
         });
 
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < 3; i++) { //valida la respuesta
                 int randomPaisesB = aleatorioP.nextInt(longVec);
                 String nombreAhora = nombrePaises[randomPaisesB];
 
@@ -249,7 +249,7 @@ public class Jugar extends AppCompatActivity {
         }
 
 
-    public void correcto(int randomPaises){
+    public void correcto(int randomPaises){ //cuando la respuesta es correcta
         if (randomPaises < paises.length - 1) {
             paises[randomPaises] = paises[randomPaises + 1];
             int actual = randomPaises;
@@ -285,7 +285,7 @@ public class Jugar extends AppCompatActivity {
 
 
     }
-    public void fallaste(){
+    public void fallaste(){ //cuando la respuesta es erronea
 
 
         if (intentos!=3){

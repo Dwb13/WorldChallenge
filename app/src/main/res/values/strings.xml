@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">worldchallenge</string>
+    <string name="title_activity_instrucciones">instrucciones</string>
+    <string name="instrucciones">Instrucciones</string>
+    <string name="ajustes">Ajustes</string>
+    <string name="jugar">Jugar</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="sonido">Sonido</string>
+    <string name="atras">Atras</string>
+    <string name="musica">Musica</string>
+    <string name="salir">Salir</string>
+    <string name="cerrar">Cerrar</string>
+    <string name="correcto">Correcto!</string>
+    <string name="fallaste">Fallaste!</string>
+    <string name="creditos">Creditos</string>
+    <string name="ganaste">Ganaste</string>
+    <string name="inicio">Inicio</string>
+    <string name="inicioG">Inicio</string>
+    <string name="ganasteG">Ganaste</string>
+    <string name="perdiste">Perdiste</string>
+    <string name="atr_s">Atrás</string>
+    <string name="para_ganar_este_juego_debes_de_acertar_en_todas_las_banderas_y_adivinar_de_que_pais_son_cada_error_se_contara_y_cuando_acumules_3_errores_tocara_iniciar_de_nuevo_el_juego_para_ganar_deberas_de_responder_15_veces_correctamente_si_tienes_suerte_habran_ocaciones_en_donde_se_te_dara_un_comodin_donde_solo_aparezcan_2_opciones_exitos">Para ganar este juego debes de acertar en todas las banderas y adivinar de que pais son, cada error se contara y cuando acumules 3 errores tocara iniciar de nuevo el juego. Para ganar deberas de responder 15 veces correctamente, si tienes suerte habran ocaciones en donde se te dara un comodin donde solo aparezcan 2 opciones. EXITOS!</string>
+    <string name="fondo">fondo</string>
+</resources>

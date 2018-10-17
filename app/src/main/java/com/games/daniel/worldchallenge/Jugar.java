@@ -16,49 +16,49 @@ import java.util.Random;
 
 
 public class Jugar extends AppCompatActivity {
-    Button boton1 ,boton2,boton3, salir;
-    Button[] botones = new Button[3];
-    int cantPaises=20,longVec=15;
-    Pais paises[] = new  Pais[cantPaises];;
-    boolean seguir=true, botonCorrecto=false;
-    TextView errores;
-    String nombrePaises[]=new String[cantPaises];
+        Button boton1 ,boton2,boton3, salir;
+        Button[] botones = new Button[3];
+        int cantPaises=20,longVec=15;
+        Pais paises[] = new  Pais[cantPaises];;
+        boolean seguir=true, botonCorrecto=false;
+        TextView errores;
+        String nombrePaises[]=new String[cantPaises];
 
 
-    String nombreTemporal, intentosS;
-    int numeroTemporal, intentos;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+        String nombreTemporal, intentosS;
+        int numeroTemporal, intentos;
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
 
-        crearPaises();
-        super.onCreate(savedInstanceState);
-        setContentView(com.games.daniel.worldchallenge.R.layout.activity_jugar);
-        boton1=(Button)findViewById(R.id.pais1);
-        boton2=(Button)findViewById(R.id.pais2);
-        boton3=(Button)findViewById(R.id.pais3);
-        salir=(Button)findViewById(R.id.salir);
-        salir.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Jugar.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
-    intentos=0;
-        botones[0]=boton1;
-        botones[1]=boton2;
-        botones[2]=boton3;
-        intentosS= Integer.toString(intentos);
-        errores=(TextView)findViewById(R.id.erroresText);
-        errores.setText(intentosS);
-        boton1.setText("");
-        boton2.setText("");
-        boton3.setText("");
+            crearPaises();
+            super.onCreate(savedInstanceState);
+            setContentView(com.games.daniel.worldchallenge.R.layout.activity_jugar);
+            boton1=(Button)findViewById(R.id.pais1);
+            boton2=(Button)findViewById(R.id.pais2);
+            boton3=(Button)findViewById(R.id.pais3);
+            salir=(Button)findViewById(R.id.salir);
+            salir.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(Jugar.this, MainActivity.class);
+                    startActivity(intent);
+                }
+            });
+            intentos=0;
+            botones[0]=boton1;
+            botones[1]=boton2;
+            botones[2]=boton3;
+            intentosS= Integer.toString(intentos);
+            errores=(TextView)findViewById(R.id.erroresText);
+            errores.setText(intentosS);
+            boton1.setText("");
+            boton2.setText("");
+            boton3.setText("");
 
-        jugar(botones,paises,paises.length);
+            jugar(botones,paises,paises.length);
 
 
-    }
+        }
     public void crearPaises() { //crea los paises
         String colombiaD = "@mipmap/b0";
         int id1 = getResources().getIdentifier(colombiaD, "drawable", getPackageName());
@@ -207,46 +207,46 @@ public class Jugar extends AppCompatActivity {
             }
         });
 
-            for (int i = 0; i < 3; i++) { //valida la respuesta
-                int randomPaisesB = aleatorioP.nextInt(longVec);
-                String nombreAhora = nombrePaises[randomPaisesB];
+        for (int i = 0; i < 3; i++) { //valida la respuesta
+            int randomPaisesB = aleatorioP.nextInt(longVec);
+            String nombreAhora = nombrePaises[randomPaisesB];
 
-                if (!paises[randomPaises].nombre.equals(nombrePaises[randomPaisesB]) && randomBoton != i) {
-                    while (nombreAhora.equals(nombrePaises[randomPaisesB])) {
-                        randomPaisesB = aleatorio.nextInt(paises.length);
-                    }
-                    while (paises[randomPaises].nombre.equals(nombrePaises[randomPaisesB])) {
-                        randomPaisesB = aleatorio.nextInt(paises.length);
-                    }
-
-                    botones[i].setText(nombrePaises[randomPaisesB]);
-                    botones[i].setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            intentos = intentos + 1;
-                            fallaste();
-
-                        }
-                    });
+            if (!paises[randomPaises].nombre.equals(nombrePaises[randomPaisesB]) && randomBoton != i) {
+                while (nombreAhora.equals(nombrePaises[randomPaisesB])) {
+                    randomPaisesB = aleatorio.nextInt(paises.length);
+                }
+                while (paises[randomPaises].nombre.equals(nombrePaises[randomPaisesB])) {
+                    randomPaisesB = aleatorio.nextInt(paises.length);
                 }
 
+                botones[i].setText(nombrePaises[randomPaisesB]);
+                botones[i].setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        intentos = intentos + 1;
+                        fallaste();
+
+                    }
+                });
             }
 
-
-
-
-
-
-            salir.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    seguir = false;
-                    Intent intent = new Intent(Jugar.this, MainActivity.class);
-                    startActivity(intent);
-                }
-            });
-
         }
+
+
+
+
+
+
+        salir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                seguir = false;
+                Intent intent = new Intent(Jugar.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+    }
 
 
     public void correcto(int randomPaises){ //cuando la respuesta es correcta
@@ -255,11 +255,11 @@ public class Jugar extends AppCompatActivity {
             int actual = randomPaises;
             int longi = paises.length-1 ;
             for (int j = actual; j < longi; j++) {
-                   if (paises[j+1].equals(null)){
-                       paises[j]=null;
-                   }
-                   else
-                       paises[j]=paises[j+1];
+                if (paises[j+1].equals(null)){
+                    paises[j]=null;
+                }
+                else
+                    paises[j]=paises[j+1];
 
             }
 
@@ -270,16 +270,16 @@ public class Jugar extends AppCompatActivity {
         longVec=longVec-1;
         System.out.println(longVec);
 
-    if(longVec>=1){
-        jugar(botones, paises,longVec);
-    }else
-    if (longVec<1)
+        if(longVec>=1){
+            jugar(botones, paises,longVec);
+        }else
+        if (longVec<1)
 
-    {
+        {
 
-        Intent intent = new Intent(Jugar.this, activity_Ganaste.class);
-        startActivity(intent);
-    }
+            Intent intent = new Intent(Jugar.this, activity_Ganaste.class);
+            startActivity(intent);
+        }
 
 
 

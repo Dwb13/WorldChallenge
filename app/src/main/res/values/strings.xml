@@ -93,4 +93,5 @@
     <string name="atr_s">Atrás</string>
     <string name="para_ganar_este_juego_debes_de_acertar_en_todas_las_banderas_y_adivinar_de_que_pais_son_cada_error_se_contara_y_cuando_acumules_3_errores_tocara_iniciar_de_nuevo_el_juego_para_ganar_deberas_de_responder_15_veces_correctamente_si_tienes_suerte_habran_ocaciones_en_donde_se_te_dara_un_comodin_donde_solo_aparezcan_2_opciones_exitos">Para ganar este juego debes de acertar en todas las banderas y adivinar de que pais son, cada error se contara y cuando acumules 3 errores tocara iniciar de nuevo el juego. Para ganar deberas de responder 15 veces correctamente, si tienes suerte habran ocaciones en donde se te dara un comodin donde solo aparezcan 2 opciones. EXITOS!</string>
     <string name="fondo">fondo</string>
+    <string name="title_activity_level2">Level2</string>
 </resources>

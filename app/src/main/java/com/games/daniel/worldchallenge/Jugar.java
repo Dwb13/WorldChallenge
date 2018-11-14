@@ -1,5 +1,6 @@
 package com.games.daniel.worldchallenge;
 
+import android.content.Context;
 import android.content.Intent;
 
 
@@ -11,6 +12,7 @@ import android.widget.ImageView;
 import android.graphics.drawable.Drawable;
 import android.widget.TextView;
 
+import java.io.File;
 import java.util.Random;
 
 
@@ -276,7 +278,7 @@ public class Jugar extends AppCompatActivity {
         if (longVec<1)
 
         {
-
+            deleteCache(Jugar.this);
             Intent intent = new Intent(Jugar.this, activity_Ganaste.class);
             startActivity(intent);
         }
@@ -292,15 +294,38 @@ public class Jugar extends AppCompatActivity {
             intentosS= Integer.toString(intentos);
             errores=(TextView)findViewById(R.id.erroresText);
             errores.setText(intentosS);
-
             jugar(botones,paises,longVec);
 
         }else{
+            deleteCache(Jugar.this);
             Intent intent = new Intent(Jugar.this, perdiste.class);
             startActivity(intent);
         }
 
 
+    }
+    public static void deleteCache(Context context) {
+        try {
+            File dir = context.getCacheDir();
+            deleteDir(dir);
+        } catch (Exception e) { e.printStackTrace();}
+    }
+
+    public static boolean deleteDir(File dir) {
+        if (dir != null && dir.isDirectory()) {
+            String[] children = dir.list();
+            for (int i = 0; i < children.length; i++) {
+                boolean success = deleteDir(new File(dir, children[i]));
+                if (!success) {
+                    return false;
+                }
+            }
+            return dir.delete();
+        } else if(dir!= null && dir.isFile()) {
+            return dir.delete();
+        } else {
+            return false;
+        }
     }
 
 

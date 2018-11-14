@@ -1,5 +1,6 @@
 package com.games.daniel.worldchallenge;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.File;
 import java.util.Random;
 
 public class Level2 extends AppCompatActivity {
@@ -57,125 +59,127 @@ public class Level2 extends AppCompatActivity {
 
     }
     public void crearPaises() { //crea los paises
-        String colombiaD = "@mipmap/b0";
-        int id1 = getResources().getIdentifier(colombiaD, "drawable", getPackageName());
-        Drawable colombiaDr = getResources().getDrawable(id1);
-        String usaD = "@mipmap/b1";
-        int id2 = getResources().getIdentifier(usaD, "drawable", getPackageName());
-        Drawable usaDr = getResources().getDrawable(id2);
-        String chileD = "@mipmap/b2";
-        int id3 = getResources().getIdentifier(chileD, "drawable", getPackageName());
-        Drawable chileDr = getResources().getDrawable(id3);
+        String andorraD = "@mipmap/andorra";
+        int id1 = getResources().getIdentifier(andorraD, "drawable", getPackageName());
+        Drawable andorraDr = getResources().getDrawable(id1);
 
-        String canadaD = "@mipmap/b3";
-        int id4 = getResources().getIdentifier(canadaD, "drawable", getPackageName());
-        Drawable canadaDr = getResources().getDrawable(id4);
+        String argeliaD = "@mipmap/argelia";
+        int id2 = getResources().getIdentifier(argeliaD, "drawable", getPackageName());
+        Drawable argeliaDr = getResources().getDrawable(id2);
 
-        String argentinaD = "@mipmap/b4";
-        int id5 = getResources().getIdentifier(argentinaD, "drawable", getPackageName());
-        Drawable argentinaDr = getResources().getDrawable(id5);
+        String armeniaD = "@mipmap/armenia";
+        int id3 = getResources().getIdentifier(armeniaD, "drawable", getPackageName());
+        Drawable armeniaDr = getResources().getDrawable(id3);
 
-        String brasilD = "@mipmap/b5";
-        int id6 = getResources().getIdentifier(brasilD, "drawable", getPackageName());
-        Drawable brasilDr = getResources().getDrawable(id6);
+        String bangladeshD = "@mipmap/bangladesh";
+        int id4 = getResources().getIdentifier(bangladeshD, "drawable", getPackageName());
+        Drawable bangladeshDr = getResources().getDrawable(id4);
 
-        String alemaniaD = "@mipmap/b6";
-        int id7 = getResources().getIdentifier(alemaniaD, "drawable", getPackageName());
-        Drawable alemaniaDr = getResources().getDrawable(id7);
+        String barbadosD = "@mipmap/barbados";
+        int id5 = getResources().getIdentifier(barbadosD, "drawable", getPackageName());
+        Drawable barbadosDr = getResources().getDrawable(id5);
 
-        String inglaterraD = "@mipmap/b7";
-        int id8 = getResources().getIdentifier(inglaterraD, "drawable", getPackageName());
-        Drawable inglaterraDr = getResources().getDrawable(id8);
+        String dubaiD = "@mipmap/dubai";
+        int id6 = getResources().getIdentifier(dubaiD, "drawable", getPackageName());
+        Drawable dubaiDr = getResources().getDrawable(id6);
 
-        String japonD = "@mipmap/b8";
-        int id9 = getResources().getIdentifier(japonD, "drawable", getPackageName());
-        Drawable japonDr = getResources().getDrawable(id9);
+        String guayanaD = "@mipmap/guayana";
+        int id7 = getResources().getIdentifier(guayanaD, "drawable", getPackageName());
+        Drawable guayanaDr = getResources().getDrawable(id7);
 
-        String mexD = "@mipmap/b9";
-        int id10 = getResources().getIdentifier(mexD, "drawable", getPackageName());
-        Drawable mexicoDr = getResources().getDrawable(id10);
+        String indiaD = "@mipmap/india";
+        int id8 = getResources().getIdentifier(indiaD, "drawable", getPackageName());
+        Drawable indiaDr = getResources().getDrawable(id8);
 
-        String panamaD = "@mipmap/b10";
-        int id11 = getResources().getIdentifier(panamaD, "drawable", getPackageName());
-        Drawable panamaDr = getResources().getDrawable(id11);
+        String iranD = "@mipmap/iran";
+        int id9 = getResources().getIdentifier(iranD, "drawable", getPackageName());
+        Drawable iranDr = getResources().getDrawable(id9);
 
-        String hondurasD = "@mipmap/b11";
-        int id12 = getResources().getIdentifier(hondurasD, "drawable", getPackageName());
-        Drawable hondurasDr = getResources().getDrawable(id12);
+        String keniaD = "@mipmap/kenia";
+        int id10 = getResources().getIdentifier(keniaD, "drawable", getPackageName());
+        Drawable keniaDr = getResources().getDrawable(id10);
 
-        String rusiaD = "@mipmap/b12";
-        int id13 = getResources().getIdentifier(rusiaD, "drawable", getPackageName());
-        Drawable rusiaDR = getResources().getDrawable(id13);
+        String lituniaD = "@mipmap/lituania";
+        int id11 = getResources().getIdentifier(lituniaD, "drawable", getPackageName());
+        Drawable lituniaDr = getResources().getDrawable(id11);
 
-        String peruD = "@mipmap/b13";
-        int id14 = getResources().getIdentifier(peruD, "drawable", getPackageName());
-        Drawable peruDR = getResources().getDrawable(id14);
+        String macedoniaD = "@mipmap/macedonia";
+        int id12 = getResources().getIdentifier(macedoniaD, "drawable", getPackageName());
+        Drawable macedoniaDr = getResources().getDrawable(id12);
 
-        String holandaD = "@mipmap/b14";
-        int id15 = getResources().getIdentifier(holandaD, "drawable", getPackageName());
-        Drawable holandaDR = getResources().getDrawable(id15);
+        String mozambiqueD = "@mipmap/mozambique";
+        int id13 = getResources().getIdentifier(mozambiqueD, "drawable", getPackageName());
+        Drawable mozambiqueDR = getResources().getDrawable(id13);
 
-        String venezuelaD = "@mipmap/b15";
-        int id16 = getResources().getIdentifier(venezuelaD, "drawable", getPackageName());
-        Drawable venezuelaDR = getResources().getDrawable(id16);
+        String pakistanD = "@mipmap/pakistan";
+        int id14 = getResources().getIdentifier(pakistanD, "drawable", getPackageName());
+        Drawable pakistanDR = getResources().getDrawable(id14);
 
-        String boliviaB = "@mipmap/b16";
-        int id17 = getResources().getIdentifier(boliviaB, "drawable", getPackageName());
-        Drawable boliviaDR = getResources().getDrawable(id17);
+        String sanMarinoD = "@mipmap/sanmarino";
+        int id15 = getResources().getIdentifier(sanMarinoD, "drawable", getPackageName());
+        Drawable sanMarinoDR = getResources().getDrawable(id15);
 
-        String cubaB = "@mipmap/b17";
-        int id18 = getResources().getIdentifier(cubaB, "drawable", getPackageName());
-        Drawable cubaDR = getResources().getDrawable(id18);
+        String somaliaD = "@mipmap/somalia";
+        int id16 = getResources().getIdentifier(somaliaD, "drawable", getPackageName());
+        Drawable somaliaDR = getResources().getDrawable(id16);
 
-        String portugalB = "@mipmap/b18";
-        int id19 = getResources().getIdentifier(portugalB, "drawable", getPackageName());
-        Drawable portugarDR = getResources().getDrawable(id19);
+        String sudanD = "@mipmap/sudan";
+        int id17 = getResources().getIdentifier(sudanD, "drawable", getPackageName());
+        Drawable sudanDR = getResources().getDrawable(id17);
 
-        String españaD = "@mipmap/b19";
-        int id20 = getResources().getIdentifier(españaD, "drawable", getPackageName());
-        Drawable españaDR = getResources().getDrawable(id20);
+        String surinamD = "@mipmap/surinam";
+        int id18 = getResources().getIdentifier(surinamD, "drawable", getPackageName());
+        Drawable surinamDR = getResources().getDrawable(id18);
+
+        String turquiaD = "@mipmap/turquia";
+        int id19 = getResources().getIdentifier(turquiaD, "drawable", getPackageName());
+        Drawable turquiaDR = getResources().getDrawable(id19);
+
+        String yugoslaviaD = "@mipmap/yugoslavia";
+        int id20 = getResources().getIdentifier(yugoslaviaD, "drawable", getPackageName());
+        Drawable yugoslaviaDR = getResources().getDrawable(id20);
 
 
-        Pais colombia = new Pais("Colombia", colombiaDr);
-        Pais usa = new Pais("USA", usaDr);
-        Pais chile = new Pais("Chile", chileDr);
-        Pais canada = new Pais("Canada", canadaDr);
-        Pais argentina = new Pais("Argentina", argentinaDr);
-        Pais brasil = new Pais("Brasil", brasilDr);
-        Pais alemania = new Pais("Alemania", alemaniaDr);
-        Pais inglaterra = new Pais("U.K", inglaterraDr);
-        Pais japon = new Pais("Japon", japonDr);
-        Pais mexico = new Pais("Mexico", mexicoDr);
-        Pais panama = new Pais("Panama", panamaDr);
-        Pais honduras = new Pais("Honduras", hondurasDr);
-        Pais rusia = new Pais("Rusia", rusiaDR);
-        Pais peru = new Pais("Peru", peruDR);
-        Pais paisesBajos = new Pais("Paises Bajos", holandaDR);
-        Pais venezuela = new Pais("Venezuela", venezuelaDR);
-        Pais bolivia = new Pais("Bolivia", boliviaDR);
-        Pais cuba = new Pais("Cuba", cubaDR);
-        Pais portugal = new Pais("Portugal", portugarDR);
-        Pais españa = new Pais("España", españaDR);
-        paises[0] = colombia;
-        paises[1] = usa;
-        paises[2] = chile;
-        paises[3] = canada;
-        paises[4] = argentina;
-        paises[5] = brasil;
-        paises[6] = alemania;
-        paises[7] = inglaterra;
-        paises[8] = japon;
-        paises[9] = mexico;
-        paises[10] = panama;
-        paises[11] = honduras;
-        paises[12] = rusia;
-        paises[13] = peru;
-        paises[14] = paisesBajos;
-        paises[15] = venezuela;
-        paises[16] = bolivia;
-        paises[17] = cuba;
-        paises[18] = portugal;
-        paises[19] = españa;
+        Pais andorra = new Pais("Andorra", andorraDr);
+        Pais argelia = new Pais("Argelia", argeliaDr);
+        Pais armenia = new Pais("Armenia", armeniaDr);
+        Pais bangladesh = new Pais("Bangladesh", bangladeshDr);
+        Pais barbados = new Pais("Barbados", barbadosDr);
+        Pais dubai = new Pais("Dubai", dubaiDr);
+        Pais guayana = new Pais("Guayana", guayanaDr);
+        Pais india= new Pais("India", indiaDr);
+        Pais iran = new Pais("Iran", iranDr);
+        Pais kenia = new Pais("Kenia", keniaDr);
+        Pais litunia = new Pais("Litunia", lituniaDr);
+        Pais macedonia = new Pais("Macedonia", macedoniaDr);
+        Pais mozambique = new Pais("Mozambique", mozambiqueDR);
+        Pais pakistan = new Pais("Pakistan", pakistanDR);
+        Pais sanMarino = new Pais("San Marino", sanMarinoDR);
+        Pais somalia = new Pais("Somalia", somaliaDR);
+        Pais sudan = new Pais("Sudan", sudanDR);
+        Pais surinam = new Pais("surinam", surinamDR);
+        Pais turquia = new Pais("Turquia", turquiaDR);
+        Pais yugoslavia = new Pais("Yugoslavia", yugoslaviaDR);
+        paises[0] = andorra;
+        paises[1] = argelia;
+        paises[2] = armenia;
+        paises[3] = bangladesh;
+        paises[4] = barbados;
+        paises[5] = dubai;
+        paises[6] = guayana;
+        paises[7] = india;
+        paises[8] = iran;
+        paises[9] = kenia;
+        paises[10] = litunia;
+        paises[11] = macedonia;
+        paises[12] = mozambique;
+        paises[13] = pakistan;
+        paises[14] = sanMarino;
+        paises[15] = somalia;
+        paises[16] = sudan;
+        paises[17] = surinam;
+        paises[18] = turquia;
+        paises[19] = yugoslavia;
         for (int i = 0; i < cantPaises; i++){
             nombrePaises[i]=paises[i].nombre;
         }
@@ -273,8 +277,8 @@ public class Level2 extends AppCompatActivity {
         if (longVec<1)
 
         {
-
-            Intent intent = new Intent(Level2.this, activity_Ganaste.class);
+            deleteCache(Level2.this);
+            Intent intent = new Intent(Level2.this, activity_ganasteFinal.class);
             startActivity(intent);
         }
 
@@ -293,12 +297,35 @@ public class Level2 extends AppCompatActivity {
             jugar(botones,paises,longVec);
 
         }else{
+            deleteCache(Level2.this);
             Intent intent = new Intent(Level2.this, perdiste.class);
             startActivity(intent);
         }
 
 
     }
+    public static void deleteCache(Context context) {
+        try {
+            File dir = context.getCacheDir();
+            deleteDir(dir);
+        } catch (Exception e) { e.printStackTrace();}
+    }
 
+    public static boolean deleteDir(File dir) {
+        if (dir != null && dir.isDirectory()) {
+            String[] children = dir.list();
+            for (int i = 0; i < children.length; i++) {
+                boolean success = deleteDir(new File(dir, children[i]));
+                if (!success) {
+                    return false;
+                }
+            }
+            return dir.delete();
+        } else if(dir!= null && dir.isFile()) {
+            return dir.delete();
+        } else {
+            return false;
+        }
+    }
 
 }
